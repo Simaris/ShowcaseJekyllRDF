@@ -1,0 +1,7 @@
+<div class="news">
+    {% assign reports = include.reportCollection | rdf_collection %}
+    {% for report in reports %}
+    <h3>{{report | rdf_property: "<http://www.web-rdf.com/News#Title>", "en"}} <--> {{report | rdf_property: "news:TimeStamp"}}</h3>
+    <p class="news text">{{report | rdf_property: "<http://www.web-rdf.com/News#Text>", "en"}}</p>
+    {% endfor %}
+</div>

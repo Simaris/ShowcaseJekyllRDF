@@ -1,0 +1,10 @@
+{% assign employee = include.employee %}
+<div class="name">
+    <h6>First Name:</h6><p class="name">{{ employee | rdf_property: "wrp:FirstName"}}</p>
+    <h6>Last Name:</h6><p class="name">{{ employee | rdf_property: "wrp:LastName"}}</p>
+</div>
+<div class="contact">
+    <a class="mail" href="mailto:{{ employee | rdf_property: "wrp:mail"}}">mail</a>
+    <h6>Tel.:</h6><p class="Tel">{{ employee | rdf_property: "wrp:TelNum"}}</p>
+    <h6>Office Hours:</h6><p class="timespan"> <div class="tbegin"> von {{ employee | rdf_property: "wrp:OfficeHourBegin"}}</div> <div class="tend"> bis {{ employee | rdf_property: "wrp:OfficeHourEnd"}}</div> </p>
+</div>

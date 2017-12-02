@@ -1,0 +1,30 @@
+---
+---
+<html>
+    <head>
+        <title>Web RDF</title>
+         <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <div>
+            <p>Welcome to Web RDF. A company tasked with maintaining RDFs web presentation that is also completely fictional. No character mentioned here is a real live persona and similarities with real people are purely coincidental.</p>
+            <p>Web RDF uses Jekyll-RDF for each of their web appearances. Jekyll-RDF is a plugin for the site building system Jekyll, made by the creators of GitHub. The following site will showcase how to use Jekyll-RDF for enhancing your site with RDF technologies.</p>
+            <div>
+                <h1>News</h1>
+                {% assign newsCollection = "wrdf:News" | rdf_get %}
+                {% include Reports.html reportCollection = newsCollection %}
+            </div>
+            <div>
+                <h1>Personal</h1>
+                {% assign personalContainer = "wrdf:Employee" | rdf_get %}
+                {% include Employees.html employeeC = personalContainer %}
+            </div>
+            <div>
+                <h1>Projects</h1>
+            </div>
+            <div>
+                <h1>Partners and Associates</h1>
+            </div>
+        </div>
+    </body>
+</html>
