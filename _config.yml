@@ -33,4 +33,5 @@ jekyll_rdf:
   restriction: "SELECT ?resourceUri WHERE { ?resourceUri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.web-rdf.com/renderable>}"
   default_template: "rdf_index.html"
   class_template_mappings:
+      "http://www.web-rdf.com/Project" : project.html
   instance_template_mappings:

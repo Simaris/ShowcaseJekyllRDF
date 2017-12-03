@@ -1,0 +1,10 @@
+{% assign projectQuery = "SELECT ?proj WHERE {?proj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.web-rdf.com/Project>}"%} <!-- prefixes do not seem to work here -->
+{% assign projects = nil | sparql_query: projectQuery %}
+{% for project in projects %}
+<h3>{{project.proj | rdf_property: "wpr:Name", "en"}}</h3>
+<div class="shortDesc">
+    <p>{{project.proj | rdf_property: "wpr:Short", "en"}}
+        <a href="{{project.proj.render_path}}">more</a>
+    </p>
+</div>
+{% endfor %}

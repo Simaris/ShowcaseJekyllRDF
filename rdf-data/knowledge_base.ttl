@@ -5,6 +5,7 @@
 @prefix wrdf: <http://www.web-rdf.com/> .
 @prefix news: <http://www.web-rdf.com/News#> .
 @prefix wrp: <http://www.web-rdf.com/Person#> .
+@prefix wpr: <http://www.web-rdf.com/Project#> .
 
 wrdf:News a rdf:List.
 wrdf:News rdf:first news:ClickMilestone .
@@ -96,3 +97,41 @@ wrp:AlexandraHansen wrp:FirstName "Alexandra" ;
                wrp:TelNum "+490110928335" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
                wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+
+wpr:NNFinanz a wrdf:Project,
+               wrdf:renderable;
+             wpr:Name "Analyse des Finanzmarktes durch Neuronale Netze"@de,
+                      "Analysis of the Capital Market through Neuronal Networks"@en;
+             wpr:Short "We introduce a tool for analysing the current market situation and current market trends."@en,
+                      "Wir stellen unser Tool zu Analyse der momentanen Marktsituation und der entsprechenden Markttrends vor."@de;
+             wpr:Long "Currently, the analysis of the capital market requires in depth knowledge and therefore can be very expensive. Additionally, corresponding specialist often react irrational to new or unexpected situations, which they were not sufficiently trained for. Therefore, we introduce our learning finanz manager Nof (Neuronal Networks on Finanzes), a learning program to rationalize the job of bankers and managers ..."@en,
+                      "Zur Zeit setzt die Analyse des Finanzmarktes tief gehendes Wissen und Verständnis über die Finanzlage voraus, wodurch eine Analyse sehr teuer werden kann. Außerdem reagieren entsprechende Spezialisten oftmals suboptimal auf Situationen für die sie nicht ausgebildet wurden. Deshalb stellen wir hiermit unseren lernfähigen Finanzmanager Nof (Neuronal Networks on Finanzes) vor, welcher die Notwendigkeit für zusätzliche Manager und Bankier umgehen soll..."@de;
+             wpr:coworker wrp:ErinVargas,
+                        wrp:FrancisHart,
+                        wrp:JohannaKelley.
+
+wpr:SiteCrawler a wrdf:Project,
+               wrdf:renderable;
+               wpr:Name "Crawling sites to identify illegal content"@en,
+                        "Durchsuchen von Webseiten zur Identifizierung von illegalen Inhalten"@de;
+               wpr:Short "Finding illegal content is a difficult task for reasons like their are different potentially abstract types of content. Our new crawler will help."@en,
+                        "Das finden von illegalen Inhalten ist eine schwierige Aufgabe, da es content in verschiedenen Formen vorliegen kann. Unser neues Tool soll dem Abhilfe verschaffen"@de;
+               wpr:Long "Thanks to new statistical analysis to the distribution of illegal content, we were able to identify 50 new classes (from a technical standpoint) of copyright breaches. These range from simple breaches often made by mistake to the systematic approaches of highly coordinated criminal organisations. Since, these classification on their own do not provide any benefit, we developed a new Tool for crawling website, which far more reliable to previous products thanks to the far more fine grained..."@en,
+                        "Dank neuer Statistiken zur Verbreitung von illegalen Inhalten waren wir in der Lage 50 neue Kategorien (alle von einem technischen Standpunkt abgegrenzt) von Copyright Verletzungen zu identifizieren. Diese Verletzungen  reichen von einfachen versehentlichen Verletzungen zu den systematischen Ansätzen gut organisierter Verbrecherbanden. Da diese Klassifizierungen für sich genommen wenig Nutzen bringen, haben wir einen Site Crawler entwickelt, der sehr viel zuverlässiger ist als andere Producte. Dies wird erreicht durch die feinere..."@de;
+               wpr:coworker wrp:WallaceGray,
+                        wrp:SantiagoWhite,
+                        wrp:DeloresBanks.
+
+wpr:FlightCoordinater a wrdf:Project,
+               wrdf:renderable;
+               wpr:Name "Weltweites Koordinieren von Flugplänen"@de,
+                        "World wide coordination of Flight plans"@en;
+               wpr:Short "A tool for the daunting task of world wide coordination of planes and schedules"@en,
+                        "Ein Tool für die gerade zu einschüchternde Aufgabe Flugzeuge und Zeitpläne zu coordinieren"@de;
+               wpr:Long "The coordination of flights and the creation of corresponding schedules is for many a daunting task. Not only is the rather obvious problem of timing each flight already quite a challenge, more obscure problems like downtime minimization, cleaning, storing, maintenance and pilot shifts have to be factored in. Through the multidimensionality of the problem at hand, human mistakes are basically inevitable. These mistakes can have potentially disastrous Consequences. Therefor, ..."@en,
+                        "Die Koordination von Flügen und die Erstellung von entsprechenden Plänen ist für viele eine einschüchternde Aufgabe. Nicht nur ist die bereits offensichtliche Aufgabe das Timing eines jeden Fluges richtig zu bestimmen bereits sehr herausfordernd. Auch weniger direkte Probleme wie Downtimeminimierung, Säuberungen, Lagerung, Pflege und Pilot Schichten müssen mit bedacht werden. Durch die Vielfältigkeit dieser Aufgabe besteht eine sehr große Chance auf menschlicher Seite Fehler ein zu bauen. Daher .."@de;
+               wpr:coworker wrp:ErinVargas,
+                        wrp:AlexandraHansen,
+                        wrp:JohannaKelley,
+                        wrp:EmmettRios,
+                        wrp:MarcellaJimenez.
