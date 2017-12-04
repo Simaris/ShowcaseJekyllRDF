@@ -4,5 +4,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX wrdf: <http://www.web-rdf.com/>
 PREFIX news: <http://www.web-rdf.com/News#>
-PREFIX wrp: <http://www.web-rdf.com/Person#>
-PREFIX wpr: <http://www.web-rdf.com/Project#>
+PREFIX wrp: <http://www.web-rdf.com/Person/>
+PREFIX wpr: <http://www.web-rdf.com/Project/>

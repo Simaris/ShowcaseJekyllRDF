@@ -4,8 +4,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wrdf: <http://www.web-rdf.com/> .
 @prefix news: <http://www.web-rdf.com/News#> .
-@prefix wrp: <http://www.web-rdf.com/Person#> .
-@prefix wpr: <http://www.web-rdf.com/Project#> .
+@prefix wrp: <http://www.web-rdf.com/Person/> .
+@prefix wpr: <http://www.web-rdf.com/Project/> .
 
 wrdf:News a rdf:List.
 wrdf:News rdf:first news:ClickMilestone .
@@ -42,61 +42,81 @@ wrp:ErinVargas wrp:FirstName "Erin" ;
                wrp:mail "erin.vargas@webrdf.com" ;
                wrp:TelNum "+497329474529" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:FrancisHart wrp:FirstName "Francis" ;
                wrp:LastName "Hart" ;
                wrp:mail "francis.hart@webrdf.com" ;
                wrp:TelNum "+492357982346" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:EmmettRios wrp:FirstName "Emmett" ;
                wrp:LastName "Rios" ;
                wrp:mail "emmett.rios@webrdf.com" ;
                wrp:TelNum "+495719032171" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:WallaceGray wrp:FirstName "Wallace" ;
                wrp:LastName "Gray" ;
                wrp:mail "wallace.gray@webrdf.com" ;
                wrp:TelNum "+491050123758" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:SantiagoWhite wrp:FirstName "Santiago" ;
                wrp:LastName "White" ;
                wrp:mail "santiago.white@webrdf.com" ;
                wrp:TelNum "+491570801302" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:JanWade wrp:FirstName "Jan" ;
                wrp:LastName "Wade" ;
                wrp:mail "jan.wade@webrdf.com" ;
                wrp:TelNum "+491032587953" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:MarcellaJimenez wrp:FirstName "Marcella" ;
                wrp:LastName "Jimenez" ;
                wrp:mail "marcella.jimenez@webrdf.com" ;
                wrp:TelNum "+491039257039" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:JohannaKelley wrp:FirstName "Johanna" ;
                wrp:LastName "Kelley" ;
                wrp:mail "johanna.kelley@webrdf.com" ;
                wrp:TelNum "+490147501938" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:DeloresBanks wrp:FirstName "Delores" ;
                wrp:LastName "Banks" ;
                wrp:mail "delores.banks@webrdf.com" ;
                wrp:TelNum "+491093457831" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 wrp:AlexandraHansen wrp:FirstName "Alexandra" ;
                wrp:LastName "Hansen" ;
                wrp:mail "alexandra.hansen@webrdf.com" ;
                wrp:TelNum "+490110928335" ;
                wrp:OfficeHourBegin "13:00:00"^^xsd:time ;
-               wrp:OfficeHourEnd "18:00:00"^^xsd:time .
+               wrp:OfficeHourEnd "18:00:00"^^xsd:time ;
+               a wrdf:renderable,
+                 wrdf:Person.
 
 wpr:NNFinanz a wrdf:Project,
                wrdf:renderable;
@@ -111,7 +131,7 @@ wpr:NNFinanz a wrdf:Project,
                         wrp:JohannaKelley.
 
 wpr:SiteCrawler a wrdf:Project,
-               wrdf:renderable;
+                  wrdf:renderable;
                wpr:Name "Crawling sites to identify illegal content"@en,
                         "Durchsuchen von Webseiten zur Identifizierung von illegalen Inhalten"@de;
                wpr:Short "Finding illegal content is a difficult task for reasons like their are different potentially abstract types of content. Our new crawler will help."@en,
@@ -123,7 +143,7 @@ wpr:SiteCrawler a wrdf:Project,
                         wrp:DeloresBanks.
 
 wpr:FlightCoordinater a wrdf:Project,
-               wrdf:renderable;
+                        wrdf:renderable;
                wpr:Name "Weltweites Koordinieren von Flugplänen"@de,
                         "World wide coordination of Flight plans"@en;
                wpr:Short "A tool for the daunting task of world wide coordination of planes and schedules"@en,
