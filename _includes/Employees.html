@@ -1,6 +1,4 @@
-<div class="employees">
     {% assign employees = include.employeeC | rdf_container %}
-    {% for employee in employees %}
+    {% for employee in employees limit:3 %}
     {% include employee.html employee = employee %}
     {% endfor %}
-</div>

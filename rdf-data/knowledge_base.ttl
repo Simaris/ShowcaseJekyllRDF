@@ -8,34 +8,34 @@
 @prefix wpr: <http://www.web-rdf.com/Project/> .
 
 wrdf:News a rdf:List.
-wrdf:News rdf:first news:ClickMilestone .
-wrdf:News rdf:rest news:1 .
-news:1 rdf:first news:UserFeedback .
-news:1 rdf:rest news:2 .
-news:2 rdf:first news:FirstReport .
-news:2 rdf:rest rdf:nil .
+wrdf:News rdf:first news:ClickMilestone ;
+          rdf:rest news:1 .
+news:1 rdf:first news:UserFeedback ;
+       rdf:rest news:2 .
+news:2 rdf:first news:FirstReport ;
+       rdf:rest rdf:nil .
 
-news:ClickMilestone news:Title "Over 500 Webpages use Jekyll-RDF"@en .
-news:ClickMilestone news:Text "Only 24 hours have passed and Jekyll-RDF already boasts a surprising number of over 500 Users. It seems like the RDF community is quickly accepting Jekyll-RDF as their new web tool..."@en .
-news:ClickMilestone news:TimeStamp "2016-01-01-13:00"^^xsd:date .
-news:UserFeedback news:Title "First user feedback looks great"@en .
-news:UserFeedback news:Text "Jekyll-RDF came out 12 hours ago and feedback is already pouring in. The general reception of our new Jekyll plugin is generally very positiv. However, Jekyll-RDF still has some way to go and criticism is heard quite often..."@en .
-news:UserFeedback news:TimeStamp "2016-10-01-01:30"^^xsd:date .
-news:FirstReport news:Title "Jekyll-RDF is out"@en .
-news:FirstReport news:Text "Jekyll-RDF is now available to download for free. It is a new tool for rendering RDF content that concentrates on rapidly rendering on large amounts of RDF resources with a relative small workload on the human part..."@en .
-news:FirstReport news:TimeStamp "2016-09-30-13:00"^^xsd:date .
+news:ClickMilestone news:Title "Over 500 Webpages use Jekyll-RDF"@en ;
+                    news:Text "Only 24 hours have passed and Jekyll-RDF already boasts a surprising number of over 500 Users. It seems like the RDF community is quickly accepting Jekyll-RDF as their new web tool..."@en ;
+                    news:TimeStamp "2016-01-01-13:00"^^xsd:date .
+news:UserFeedback news:Title "First user feedback looks great"@en ;
+                  news:Text "Jekyll-RDF came out 12 hours ago and feedback is already pouring in. The general reception of our new Jekyll plugin is generally very positiv. However, Jekyll-RDF still has some way to go and criticism is heard quite often..."@en ;
+                  news:TimeStamp "2016-10-01-01:30"^^xsd:date .
+news:FirstReport news:Title "Jekyll-RDF is out"@en ;
+                 news:Text "Jekyll-RDF is now available to download for free. It is a new tool for rendering RDF content that concentrates on rapidly rendering on large amounts of RDF resources with a relative small workload on the human part..."@en ;
+                 news:TimeStamp "2016-09-30-13:00"^^xsd:date .
 
 wrdf:Employee a rdf:Seq .
-wrdf:Employee rdf:_1 wrp:ErinVargas .
-wrdf:Employee rdf:_2 wrp:FrancisHart .
-wrdf:Employee rdf:_3 wrp:EmmettRios .
-wrdf:Employee rdf:_4 wrp:WallaceGray .
-wrdf:Employee rdf:_5 wrp:SantiagoWhite .
-wrdf:Employee rdf:_6 wrp:JanWade .
-wrdf:Employee rdf:_7 wrp:MarcellaJimenez .
-wrdf:Employee rdf:_8 wrp:JohannaKelley .
-wrdf:Employee rdf:_9 wrp:DeloresBanks .
-wrdf:Employee rdf:_10 wrp:AlexandraHansen .
+wrdf:Employee rdf:_1 wrp:ErinVargas ;
+              rdf:_2 wrp:FrancisHart ;
+              rdf:_3 wrp:EmmettRios ;
+              rdf:_4 wrp:WallaceGray ;
+              rdf:_5 wrp:SantiagoWhite ;
+              rdf:_6 wrp:JanWade ;
+              rdf:_7 wrp:MarcellaJimenez ;
+              rdf:_8 wrp:JohannaKelley ;
+              rdf:_9 wrp:DeloresBanks ;
+              rdf:_10 wrp:AlexandraHansen .
 
 wrp:ErinVargas wrp:FirstName "Erin" ;
                wrp:LastName "Vargas" ;
@@ -146,7 +146,7 @@ wpr:FlightCoordinater a wrdf:Project,
                         wrdf:renderable;
                wpr:Name "Weltweites Koordinieren von Flugplänen"@de,
                         "World wide coordination of Flight plans"@en;
-               wpr:Short "A tool for the daunting task of world wide coordination of planes and schedules"@en,
+               wpr:Short "A tool for the daunting task of world wide coordination of planes and schedules."@en,
                         "Ein Tool für die gerade zu einschüchternde Aufgabe Flugzeuge und Zeitpläne zu coordinieren"@de;
                wpr:Long "The coordination of flights and the creation of corresponding schedules is for many a daunting task. Not only is the rather obvious problem of timing each flight already quite a challenge, more obscure problems like downtime minimization, cleaning, storing, maintenance and pilot shifts have to be factored in. Through the multidimensionality of the problem at hand, human mistakes are basically inevitable. These mistakes can have potentially disastrous Consequences. Therefor, ..."@en,
                         "Die Koordination von Flügen und die Erstellung von entsprechenden Plänen ist für viele eine einschüchternde Aufgabe. Nicht nur ist die bereits offensichtliche Aufgabe das Timing eines jeden Fluges richtig zu bestimmen bereits sehr herausfordernd. Auch weniger direkte Probleme wie Downtimeminimierung, Säuberungen, Lagerung, Pflege und Pilot Schichten müssen mit bedacht werden. Durch die Vielfältigkeit dieser Aufgabe besteht eine sehr große Chance auf menschlicher Seite Fehler ein zu bauen. Daher .."@de;

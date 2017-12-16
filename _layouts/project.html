@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
+---
+layout: default
+---
+<!--    <head>
         <title>{{page.rdf | rdf_property: "wpr:Name", "cfg"}}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <h1>{{page.rdf | rdf_property: "wpr:Name", "cfg"}}</h1>
-        <div>
-            <h6>Description</h6>
-            <p>{{page.rdf | rdf_property: "wpr:Long", "cfg"}}</p>
-        </div>
-        <div>
-            <h6>Associate People:</h6>
-            {% assign employee = page.rdf | rdf_property: "wpr:coworker", nil, true %}
-            {% for coworker in employee %}
-            <div class="Person">
-                <h6>Name</h6><p>{{ coworker | rdf_property: "wrp:FirstName"}} {{ coworker | rdf_property: "wrp:LastName"}} <a href="{{coworker.page_url}}">page</a></p>
-            </div>
-            {% endfor %}
-        </div>
-    </body>
-</html>
+-->
+<h1>{{page.rdf | rdf_property: "wpr:Name", "cfg"}}</h1>
+<div>
+    <h6>Description</h6>
+    <p>{{page.rdf | rdf_property: "wpr:Long", "cfg"}}</p>
+</div>
+<div>
+    <h6>Associate People:</h6>
+    {% assign employee = page.rdf | rdf_property: "wpr:coworker", nil, true %}
+    {% for coworker in employee %}
+    <div class="Person">
+        <h6>Name</h6><p>{{ coworker | rdf_property: "wrp:FirstName"}} {{ coworker | rdf_property: "wrp:LastName"}} <a href="{{ coworker.page_url | prepend: site.baseurl | prepend: site.url }}">page</a></p>
+    </div>
+    {% endfor %}
+</div>

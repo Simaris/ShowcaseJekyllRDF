@@ -1,10 +1,12 @@
 {% assign employee = include.employee %}
-<div class="name">
-    <h6>First Name:</h6><p class="name">{{ employee | rdf_property: "wrp:FirstName"}}</p>
-    <h6>Last Name:</h6><p class="name">{{ employee | rdf_property: "wrp:LastName"}}</p>
-</div>
-<div class="contact">
-    <a class="mail" href="mailto:{{ employee | rdf_property: "wrp:mail"}}">mail</a>
-    <h6>Tel.:</h6><p class="Tel">{{ employee | rdf_property: "wrp:TelNum"}}</p>
-    <h6>Office Hours:</h6><p class="timespan"> <div class="tbegin"> von {{ employee | rdf_property: "wrp:OfficeHourBegin"}}</div> <div class="tend"> bis {{ employee | rdf_property: "wrp:OfficeHourEnd"}}</div> </p>
+<div class="employees row">
+    <div class="col-lg-4 col-md-6 name">
+        <h6 style="display:inline-block">First Name:</h6><p class="name" style="display:inline"> {{ employee | rdf_property: "wrp:FirstName"}}</p><br>
+        <h6 style="display:inline-block">Last Name:</h6><p class="name" style="display:inline"> {{ employee | rdf_property: "wrp:LastName"}}</p>
+    </div>
+    <div class="col-lg-8 col-md-6 contact">
+        <a class="mail" href="mailto:{{ employee | rdf_property: "wrp:mail"}}">mail</a> <br>
+        <h6 style="display:inline-block">Tel.:</h6> <p class="Tel" style="display:inline"> {{ employee | rdf_property: "wrp:TelNum"}}</p> <br>
+        <h6 style="display:inline-block">Office Hours:</h6><p class="timespan" style="display:inline"> <div class="tbegin"> von {{ employee | rdf_property: "wrp:OfficeHourBegin"}}</div> <div class="tend"> bis {{ employee | rdf_property: "wrp:OfficeHourEnd"}}</div> </p>
+    </div>
 </div>
