@@ -1,4 +1,4 @@
     {% assign employees = include.employeeC | rdf_container %}
-    {% for employee in employees limit:3 %}
+    {% for employee in employees limit:include.limit %}
     {% include employee.html employee = employee %}
     {% endfor %}

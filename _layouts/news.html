@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="container">
+    <h1 class="row">News</h1>
+    {% assign newsCollection = "wrdf:News" | rdf_get %}
+    {% include Reports.html reportCollection = newsCollection %}
+</div>

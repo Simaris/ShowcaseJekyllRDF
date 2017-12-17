@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="container">
+    <h1 class="row">Personal</h1>
+    {% assign personalContainer = "wrdf:Employee" | rdf_get %}
+    {% include Employees.html employeeC = personalContainer limit=20 %}
+</div>
