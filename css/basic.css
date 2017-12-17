@@ -1,0 +1,14 @@
+/*
+    Created on : Dec 17, 2017, 4:12:31 PM
+    Author     : nime
+*/
+
+.container-fluid{
+    background-color: rgb(51,51,51)
+}
+
+.container{
+    background-color: rgb(220, 220, 220);
+    margin-top: 15px;
+    padding: 25px
+}

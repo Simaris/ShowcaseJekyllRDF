@@ -7,17 +7,19 @@ layout: default
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 -->
-<h1>{{page.rdf | rdf_property: "wpr:Name", "cfg"}}</h1>
-<div>
-    <h6>Description</h6>
-    <p>{{page.rdf | rdf_property: "wpr:Long", "cfg"}}</p>
-</div>
-<div>
-    <h6>Associate People:</h6>
-    {% assign employee = page.rdf | rdf_property: "wpr:coworker", nil, true %}
-    {% for coworker in employee %}
-    <div class="Person">
-        <h6>Name</h6><p>{{ coworker | rdf_property: "wrp:FirstName"}} {{ coworker | rdf_property: "wrp:LastName"}} <a href="{{ coworker.page_url | prepend: site.baseurl | prepend: site.url }}">page</a></p>
+<div class="container">
+    <h1>{{page.rdf | rdf_property: "wpr:Name", "cfg"}}</h1>
+    <div>
+        <h6>Description</h6>
+        <p>{{page.rdf | rdf_property: "wpr:Long", "cfg"}}</p>
     </div>
-    {% endfor %}
+    <div>
+        <h6>Associate People:</h6>
+        {% assign employee = page.rdf | rdf_property: "wpr:coworker", nil, true %}
+        {% for coworker in employee %}
+        <div class="Person" style="display:inline-block; border-width:2px">
+            <h6 style="display:inline-block">Name: </h6><p style="display:inline">{{ coworker | rdf_property: "wrp:FirstName"}} {{ coworker | rdf_property: "wrp:LastName"}} <a href="{{ coworker.page_url | prepend: site.baseurl | prepend: site.url }}">page</a></p><br>
+        </div>
+        {% endfor %}
+    </div>
 </div>

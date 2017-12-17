@@ -3,6 +3,6 @@
 {% for project in projects %}
 <h4>{{project.proj | rdf_property: "wpr:Name", "en"}}</h4>
         <p class="shortDesc">{{project.proj | rdf_property: "wpr:Short", "en"}}
-            <a href="{{ project.proj.render_path | prepend: site.baseurl | prepend: site.url }}">more</a>
+            <a href="{{project.proj.render_path}}">more</a>
         </p>
 {% endfor %}
